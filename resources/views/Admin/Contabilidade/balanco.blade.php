@@ -19,20 +19,27 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php $tipo1 = 0; $tipo0 = 0;?>
                             @foreach($dados as $dado)
                                 <tr>
                                     <th scope="row">{{$dado->id}}</th>
                                     <td>{{$dado->name}}</td>
                                     <td>{{$dado->valor}}</td>
                                     <td>{{$dado->tipo}}</td>
-
-
-
                                 </tr>
+                                <?php if($dado->tipo == 0){
+                                	    $tipo0 = $tipo0 + $dado->valor;
+                                      }else{
+	                                $tipo1 = $tipo1 + $dado->valor;
+
+                                }
+
+
+                                ?>
                             @endforeach
                             </tbody>
                         </table>
-                            <p><h3></h3></p>
+                            <p><h3>A Pagar: {{$tipo0}}<br>A Receber: {{$tipo1}}</h3></p>
                     </div>
                 </div>
             </div>
