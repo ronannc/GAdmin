@@ -44,6 +44,14 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <p class="font-italic" name="custo" id="custo">Custo</p>
+                                    <p class="font-italic" name="total" id="total">Total</p>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>

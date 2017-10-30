@@ -11,28 +11,21 @@
                         <form class="form-horizontal">
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <label for="name">Valor chapa</label>
+                                    <label for="name">Valor Litro</label>
                                     <input id="name" type="text" class="form-control" name="name" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <label for="name">Comprimento</label>
+                                    <label for="name">Volume da Lata</label>
                                     <input id="name" type="text" class="form-control" name="name" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <label for="name">Largura</label>
-                                    <input id="name" type="text" class="form-control" name="name" required autofocus>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-8 col-md-offset-2">
-                                    <label for="name">Altura</label>
+                                    <label for="name">Volume Gasto</label>
                                     <input id="name" type="text" class="form-control" name="name" required autofocus>
                                 </div>
                             </div>
@@ -42,6 +35,13 @@
                                     <button type="submit" class="btn btn-primary">
                                         Calcular
                                     </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <p class="font-italic" name="custo" id="custo">Custo</p>
+                                    <p class="font-italic" name="total" id="total">Total</p>
                                 </div>
                             </div>
                         </form>

@@ -32,6 +32,13 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <p class="font-italic" name="custo" id="custo"></p>
+                                    <p class="font-italic" name="total" id="total"></p>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
