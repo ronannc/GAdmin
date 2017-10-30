@@ -14,6 +14,7 @@ class Contabilidade extends Model
 	 *
 	 * @var array
 	 */
+	//torna o banco escreviviel
 	protected $fillable = [
 		'name', 'valor', 'tipo',
 	];

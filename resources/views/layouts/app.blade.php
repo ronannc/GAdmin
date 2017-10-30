@@ -53,7 +53,7 @@
 
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/aPagar">A Pagae</a>
+                                    <a href="/aPagar">A Pagar</a>
                                     <a href="/aReceber">A Receber</a>
                                     <a href="/balanco">Balanco</a>
                                 </li>

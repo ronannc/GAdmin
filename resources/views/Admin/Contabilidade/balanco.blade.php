@@ -25,6 +25,9 @@
                                     <td>{{$dado->name}}</td>
                                     <td>{{$dado->valor}}</td>
                                     <td>{{$dado->tipo}}</td>
+
+
+
                                 </tr>
                             @endforeach
                             </tbody>

@@ -17,7 +17,7 @@ class CreateContabilidadesTable extends Migration
             $table->increments('id');
 	        $table->string('name');
 	        $table->string('valor');
-	        $table->string('tipo');
+	        $table->float('tipo');
             $table->timestamps();
         });
     }

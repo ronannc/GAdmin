@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contabilidade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class ContabilidadeController extends Controller
 {
@@ -14,7 +15,7 @@ class ContabilidadeController extends Controller
      */
     public function index()
     {
-    	$dados = Contabilidade::all();
+    	$dados = Contabilidade::paginate();
 
 		return view('Admin.Contabilidade.balanco', compact('dados'));
     }
@@ -26,7 +27,7 @@ class ContabilidadeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -37,7 +38,20 @@ class ContabilidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    	//faz o insert no banco
+    	$data = $request->all();
+
+    	$url = URL::previous();
+    	if (strpos($url, 'aPagar') !== false){
+		    $data['tipo'] = 0;
+		    Contabilidade::create($data);
+		    return view('Admin.Contabilidade.aPagar');
+	    }else{
+		    $data['tipo'] = 1;
+		    Contabilidade::create($data);
+		    return view('Admin.Contabilidade.aReceber');
+	    }
+
     }
 
     /**

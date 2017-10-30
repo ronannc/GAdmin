@@ -11,6 +11,9 @@
 |
 */
 
+use App\Contabilidade;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -39,9 +42,11 @@ Route::get('/aPagar', function(){
 	return view('Admin/Contabilidade/aPagar');
 });
 
-Route::get('/aReceber', function(){
+Route::get('aReceber', function(){
 	return view('Admin/Contabilidade/aReceber');
 });
 
-Route::resource('/balanco', 'ContabilidadeController');
+//controle de rotas da contabilidade, procura dereto no conroller (conabilidadeController)
+Route::resource('balanco', 'ContabilidadeController');
+
 
