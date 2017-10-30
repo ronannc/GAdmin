@@ -8,7 +8,8 @@
                     <div class="panel-heading">CAIXA COM TAMPA</div>
 
                     <div class="panel-body">
-                        <form class="form-horizontal" action="#" method="post">
+                        <form class="form-horizontal" action="#" method="get">
+
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
                                     <label for="name">Valor chapa</label>
@@ -39,7 +40,7 @@
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" onclick="calc()">
                                         Calcular
                                     </button>
                                 </div>
@@ -47,8 +48,8 @@
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <p class="font-italic" name="custo" id="custo">Custo</p>
-                                    <p class="font-italic" name="total" id="total">Total</p>
+                                    <p class="font-italic" name="custo" id="custo">Custo: </p>
+                                    <p class="font-italic" name="total" id="total">Total: </p>
                                 </div>
                             </div>
 
@@ -58,4 +59,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function calc(){
+            var x = parseFloat(document.getElementById('vChapa').value) + parseFloat(document.getElementById('alt').value) + parseFloat(document.getElementById('comp').value) + parseFloat(document.getElementById('larg').value);
+            document.getElementById('custo').innerHTML = "Custo: " + x;
+            document.getElementById('total').innerHTML = "Total: " + parseFloat(x) * 5;
+        }
+    </script>
 @endsection

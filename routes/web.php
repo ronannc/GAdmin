@@ -11,7 +11,6 @@
 |
 */
 
-use App\Contabilidade;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -20,25 +19,25 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/caixaC', function(){
+Route::get('caixaC', function(){
 	return view('Admin/Orsamento/caixaC');
 });
 
-Route::get('/caixaS', function(){
+Route::get('caixaS', function(){
 	return view('Admin/Orsamento/caixaS');
 });
 
-Route::get('/pintura', function(){
+Route::get('pintura', function(){
 	return view('Admin/Orsamento/pintura');
 });
 
-Route::get('/recorte', function(){
+Route::get('recorte', function(){
 	return view('Admin/Orsamento/recorte');
 });
 
-Route::get('/aPagar', function(){
+Route::get('aPagar', function(){
 	return view('Admin/Contabilidade/aPagar');
 });
 
